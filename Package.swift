@@ -35,7 +35,10 @@ let package = Package(
     targets: [
         .target(
             name: "Alamofire",
-            path: "Source")
+            path: "Source",
+            exclude: ["Info.plist"],
+            resources: [.process("PrivacyInfo.xcprivacy")],
+)
     ],
     swiftLanguageVersions: [.v3, .v4]
 )
